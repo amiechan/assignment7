@@ -1,0 +1,66 @@
+<!--
+ Amy Chan, Amy_Chan@student.uml.edu, amchan@cs.uml.edu
+ UMass Lowell Computer Science Student - 91.61 GUI Programming I
+ updated on August 5, 2020 at 4:55PM
+ Description: Interactive Dynamic Table HW 6
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Multiplication Table Generator</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/hw6.js"></script>
+    </head>
+    <body>
+		<div class="theme-showcase" role="main">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1>Multiplication Table Generator</h1>
+                    <p>Assignment 7 is a single page web app that creates a multiplication table and uses a jQuery form validation plugin.</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="column left">
+                <form class="form" id="tableForm">
+                    <div class="form-group">
+                        <label>Minimum Horizontal Value</label>
+                        <input class="form-control form-control-lg form-input" name="hMin" id="hMin" placeholder="Horizontal Bound">
+                        <div class="slider" id="hMinSlider"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Maximum Horizontal Value</label>
+                        <input class="form-control form-control-lg" name="hMax" id="hMax" placeholder="Horizontal Bound">
+                        <div class="slider" id="hMaxSlider"></div>
+                    </div>      
+                    <div class="form-group">
+                        <label>Minimum Vertical Value</label>
+                        <input class="form-control form-control-lg" name="vMin" id="vMin" placeholder="Vertical Bound">
+                        <div class="slider" id="vMinSlider"></div>
+                     </div>        
+                    <div class="form-group">
+                        <label>Maximum Vertical Value</label>
+                        <input class="form-control form-control-lg" name="vMax" id="vMax" placeholder="Vertical Bound">
+                        <div class="slider" id="vMaxSlider"></div>
+                    </div>
+                    <div class="form-button">
+                        <button onclick="generateTable()" type="button" id="formButton" class="btn btn-primary btn-lg">Generate Table</button>
+                        <button onclick="saveTable()" type="button" id="formButton" class="btn btn-primary btn-lg">Save Table</button>
+                    </div>
+                </form>
+            </div>   
+
+            <div id="placeholder"></div>
+    </body>
+</html>
